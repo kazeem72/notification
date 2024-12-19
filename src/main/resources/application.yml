@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_DATABASE_URL:mongodb://localhost:27017/notification}
+      auto-index-creation: true
+  sendgrid:
+    api-key: ${SENDGRID_API_KEY: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}
+
+error:
+  handling:
+    http-status-in-json-response: true
+    exception-logging: NO_LOGGING
+    full-stacktrace-http-statuses: 5xx
+    log-levels:
+      5xx: ERROR
+springdoc:
+  pathsToMatch: /, /api/**
+
+ng:
+  com:
+    justjava:
+      sendgrid:
+        fromMail: ${FROM_MAIL:kazeem.akinrinde72@gmail.com}
+        fromName: ${FROM_NAME:Kazeem}
