@@ -5,7 +5,7 @@ spring:
       auto-index-creation: true
   sendgrid:
     api-key: ${SENDGRID_API_KEY}
-
+#
 error:
   handling:
     http-status-in-json-response: true
