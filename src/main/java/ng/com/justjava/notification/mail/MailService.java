@@ -41,7 +41,7 @@ public class MailService {
             e.printStackTrace();
             System.out.println(e.getMessage());
         }
-        return 1000L;//mailRepository.save(mail).getId();
+        return mailRepository.save(mail).getId();
     }
 
     public void update(final Long id, final MailDTO mailDTO) {

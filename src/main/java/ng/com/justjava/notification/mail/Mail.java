@@ -24,8 +24,8 @@ public class Mail {
     @Size(max = 255)
     private String remark;
 
-    @NotNull
-    @Valid
+/*    @NotNull
+    @Valid*/
     private Email mailFrom;
 
     @NotNull
