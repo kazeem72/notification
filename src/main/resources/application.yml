@@ -1,3 +1,4 @@
+
 spring:
   data:
     mongodb:
@@ -22,3 +23,5 @@ ng:
       sendgrid:
         fromMail: ${FROM_MAIL:kazeem.akinrinde72@gmail.com}
         fromName: ${FROM_NAME:Kazeem}
+server:
+  port: ${PORT}

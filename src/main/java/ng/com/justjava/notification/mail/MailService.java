@@ -5,6 +5,7 @@ import java.util.List;
 import ng.com.justjava.notification.util.NotFoundException;
 import ng.com.justjava.notification.util.SendGridMailHandler;
 import org.springframework.data.domain.Sort;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 
@@ -32,6 +33,7 @@ public class MailService {
                 .orElseThrow(NotFoundException::new);
     }
 
+    @Async
     public Long create(final MailDTO mailDTO) {
         final Mail mail = new Mail();
         mapToEntity(mailDTO, mail);
