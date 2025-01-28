@@ -33,7 +33,7 @@ public class MailService {
                 .orElseThrow(NotFoundException::new);
     }
 
-    @Async
+    //@Async
     public Long create(final MailDTO mailDTO) {
         final Mail mail = new Mail();
         mapToEntity(mailDTO, mail);
